@@ -1,0 +1,261 @@
+.dashboard {
+  min-height: 100vh;
+  width: 100%;
+  padding: 80px 8%;
+  background: #f7f7f7;
+  color: #111;
+}
+
+.dashboard h1 {
+  margin-bottom: 35px;
+  font-size: 48px;
+}
+
+.error {
+  max-width: 650px;
+  margin: 0 0 20px;
+  padding: 12px 15px;
+  border: 1px solid #e2a3ad;
+  background: #fff0f2;
+  color: #8b1021;
+}
+
+.form {
+  display: grid;
+  gap: 15px;
+  width: min(100%, 650px);
+  margin-bottom: 60px;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  font: inherit;
+}
+
+.form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font: inherit;
+}
+
+.form button,
+.card button {
+  padding: 12px 22px;
+  border: 0;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form button:disabled,
+.card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.cancel {
+  background: #777 !important;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)) auto;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.filters button {
+  padding: 15px 20px;
+  border: 1px solid #111;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  font: inherit;
+}
+
+.resultsCount {
+  margin: 0 0 20px;
+  color: #666;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.card {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+}
+
+.card:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+}
+
+.card div {
+  padding: 20px;
+}
+
+.card h2 {
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.emailButton {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none !important;
+  padding: 0 !important;
+  border: 0;
+  background-color:#00000000 !important ; 
+  color: #000000 !important ;
+}
+
+/* .emailButton:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+} */
+
+.h5Email{
+  display: none;
+}
+
+.card button {
+  margin: 8px 8px 0 0;
+}
+
+.card .delete {
+  background: #b00020;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(0 0 0 / 55%);
+}
+
+.modal {
+  position: relative;
+  width: min(100%, 560px);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: 0;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.modalImage {
+  width: 260px;
+  max-height: 260px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal h2 {
+  margin: 0 0 20px;
+  font-weight: bold;
+}
+
+.detailsList {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.detailsList div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.detailsList dt {
+  color: #666;
+  font-weight: 700;
+}
+
+.detailsList dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    padding: 32px 16px;
+  }
+
+  .dashboard h1 {
+    margin-bottom: 24px;
+    font-size: 36px;
+  }
+
+  .form {
+    margin-bottom: 40px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .detailsList div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
