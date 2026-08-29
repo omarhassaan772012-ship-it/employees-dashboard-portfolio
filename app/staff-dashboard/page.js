@@ -250,7 +250,7 @@ export default function Dashboard() {
 
   return (
     <main className={styles.dashboard}>
-      <h1>Employees Dashboard</h1>
+      <h1>Staff Dashboard</h1>
 
       {error && <p className={styles.error}>{error}</p>}
 
